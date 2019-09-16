@@ -15,11 +15,13 @@ app.use(express.json());
 
 //Routes to be taken
 
-//require("./app/routing/apiRoutes")(app);
-//require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 
-// Listner starts the server
+require("./app/routing/htmlRoutes")(app);
+
+// Listner starts the server 
 
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
   });
+
